@@ -1,0 +1,37 @@
+﻿@using QRCoder
+@page "/qrcode/{link}"
+<h3>QR Code</h3>
+<p>@link</p>
+    @if (!string.IsNullOrEmpty(qrCodeImageBase64))
+{
+    <img src="data:image/png;base64,@qrCodeImageBase64" alt="QR Code" />
+}
+
+
+
+@code {
+    [Parameter]
+    public string link { get; set; }
+    
+    private string qrCodeImageBase64;
+
+    protected override void OnParametersSet()
+    {
+        GenerateQRCode();
+    }
+
+    private void GenerateQRCode()
+    {
+        using (QRCodeGenerator qrGenerator = new QRCodeGenerator())
+        {
+            using (QRCodeData qrCodeData = qrGenerator.CreateQrCode(link, QRCodeGenerator.ECCLevel.Q))
+            {
+                using (PngByteQRCode qrCode = new PngByteQRCode(qrCodeData))
+                {
+                    byte[] qrCodeImage = qrCode.GetGraphic(20);
+                    qrCodeImageBase64 = Convert.ToBase64String(qrCodeImage);
+                }
+            }
+        }
+    }
+}

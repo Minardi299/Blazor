@@ -1,0 +1,52 @@
+﻿@page "/GenericPass"
+@using FluentValidation
+@using MudBlazorWebApp1.ViewModel.Gwallet
+@inject IDialogService DialogService
+@inject Microsoft.AspNetCore.Components.NavigationManager navigationManager
+
+<MudCard>
+    <MudForm Model="@vm" @ref="@form" OnValidSubmit="OnValidSubmit" ValidationDelay="0">
+        <MudCardContent>
+            <MudTextField @bind-Value="vm.genericObject.Name"
+                          For="@(() => vm.genericObject.Name)"
+                          Immediate="true"
+                          Label="Name" />
+
+            <MudTextField @bind-Value="vm.genericObject.Phone"
+                          For="@(() => vm.genericObject.Phone)"
+                          Immediate="true"
+                          Label="Phone Number"
+                          Mask="@(new PatternMask("000-000-0000"))"
+                          MaxLength="10" />
+
+            <MudTextField @bind-Value="vm.genericObject.BarCode"
+                          For="@(() => vm.genericObject.BarCode)"
+                          Immediate="true"
+                          Label="Employee ID" />
+
+            <MudItem xs="12" md="6" lg="4">
+                <MudField Label="Pick a color" Variant="Variant.Outlined">
+                    <input type="color" @bind-value="vm.genericObject.HexColor" /><span class="ml-3">@vm.genericObject.HexColor</span>
+                </MudField>
+            </MudItem>
+        </MudCardContent>
+
+    </MudForm>
+    <MudCardActions>
+        <MudButton Variant="Variant.Filled" Color="Color.Primary" Class="ml-auto" OnClick="@(()=>GetLinkAsync())">Order</MudButton>
+    </MudCardActions>
+</MudCard>
+
+@code{
+    private GoogleWalletFormViewModel vm = new GoogleWalletFormViewModel();
+    private string link;
+    private MudForm form;
+
+    private ElementReference formRef;
+    private async void GetLinkAsync()
+    {
+        vm.genericObject.InitializeWalletObject();
+        this.link = vm.GetLink();
+        navigationManager.NavigateTo($"/qrcode/{Uri.EscapeDataString(link)}");
+    }
+ }

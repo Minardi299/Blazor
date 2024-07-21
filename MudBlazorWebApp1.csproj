@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="11.9.2" />
+		<PackageReference Include="Google.Apis.Auth" Version="1.68.0" />
+		<PackageReference Include="Google.Apis.Walletobjects.v1" Version="1.68.0.3466" />
+		<PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="8.*" />
+		<PackageReference Include="MudBlazor" Version="7.2.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="QRCoder" Version="1.6.0" />
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.3" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<!-- Set the Include path to the path where you saved the library locally. -->
+		<CodeFiles Include="lib/Google.Apis.Walletobjects.v1.cs" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<EmbeddedResource Include="Model\dulcet-voyager-385103-4c4243a8107d.json" />
+	</ItemGroup>
+
+</Project>
