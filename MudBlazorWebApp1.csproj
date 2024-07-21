@@ -21,5 +21,8 @@
 		<!-- Set the Include path to the path where you saved the library locally. -->
 		<CodeFiles Include="lib/Google.Apis.Walletobjects.v1.cs" />
 	</ItemGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="Model\dulcet-voyager-385103-4c4243a8107d.json" />
+	</ItemGroup>
 
 </Project>
