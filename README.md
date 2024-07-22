@@ -1,5 +1,5 @@
 # Blazor
-<div>
+<div style="padding: 10px;">
 # Getting started with Google Wallet API
 https://developers.google.com/wallet/generic/getting-started/onboarding-guide <br>
 -setting up account <br>
@@ -33,4 +33,4 @@ https://github.com/google-wallet/rest-samples/tree/main/dotnet
 The Google Wallet Form will take as input a name, a phone number, an unique employee id and a colour which then will be use to create a GenericPassObject.
 The Generic Card will act as a manager, has methods such as authenthicate, create, modify, sign JWT token, and delete, it will take as input a generic class and a generic object.
 Code is very similar to the samples provided above.
-# BEFORE TRYING THE CODE, YOU WILL HAVE TO INCLUDE YOUR OWN PRIVATE KEY IN THE MODEL FOLDER AND REPLACE THE CODE IN GenericCard.cs line 39
+# BEFORE TRYING THE CODE, YOU WILL HAVE TO INCLUDE YOUR OWN PRIVATE KEY IN THE MODEL FOLDER AND REPLACE THE CODE IN Model/GenericCard.cs line 39
