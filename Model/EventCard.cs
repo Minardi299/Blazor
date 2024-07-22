@@ -34,7 +34,7 @@ namespace MudBlazorWebApp1.Model.Gwallet
             this.newClass = eventPass.WalletClass;
             /*keyFilePath = Environment.GetEnvironmentVariable(
             "GOOGLE_APPLICATION_CREDENTIALS") ?? "/path/to/key.json";*/
-            keyFilePath = "dulcet-voyager-385103-4c4243a8107d.json";
+            keyFilePath = "Model\\dulcet-voyager-385103-4c4243a8107d.json";
             this.issuerId = eventObject.issuerId;
             this.classSuffix = eventObject.classSuffix;    
             this.objectSuffix = eventObject.objectSuffix;  

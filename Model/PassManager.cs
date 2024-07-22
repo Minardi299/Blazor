@@ -1,4 +1,4 @@
-﻿using Google.Apis.Auth.OAuth2;
+﻿/*using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Walletobjects.v1;
 using Google.Apis.Walletobjects.v1.Data;
@@ -18,8 +18,8 @@ namespace MudBlazorWebApp1.Model.Gwallet
         public PassManager(string keyFilePath)
         {
 
-            /*keyFilePath = Environment.GetEnvironmentVariable(
-        "GOOGLE_APPLICATION_CREDENTIALS") ?? "/path/to/key.json";*/
+            *//*keyFilePath = Environment.GetEnvironmentVariable(
+        "GOOGLE_APPLICATION_CREDENTIALS") ?? "/path/to/key.json";*//*
             keyFilePath = "dulcet-voyager-385103-4c4243a8107d.json";
         }
         public void Auth()
@@ -204,7 +204,7 @@ namespace MudBlazorWebApp1.Model.Gwallet
             return $"{issuerId}.{objectSuffix}";
         }
         // [END createObject]
-        /*public string CreateJWTNewObjects(
+        *//*public string CreateJWTNewObjects(
             )
         {
             // Ignore null values when serializing to/from JSON
@@ -263,7 +263,7 @@ namespace MudBlazorWebApp1.Model.Gwallet
             return $"https://pay.google.com/gp/v/save/{token}";
         }
         // [END jwtNew]
-*/
+*//*
         public string CreateJWTNewObjects<TClass, TObject>(TClass newClass, TObject newObject, string passType)
         {
             // Ignore null values when serializing to/from JSON
@@ -339,3 +339,4 @@ namespace MudBlazorWebApp1.Model.Gwallet
 
     }
 }
+*/
