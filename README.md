@@ -1,10 +1,13 @@
 # Blazor
+<div>
 # Getting started with Google Wallet API
-https://developers.google.com/wallet/generic/getting-started/onboarding-guide \n
--setting up account \n
-https://developers.google.com/wallet/generic/getting-started/issuer-onboarding \n
--enable wallet api for your account + generate your private key + generate an email account to authenthicate all API request \n
+https://developers.google.com/wallet/generic/getting-started/onboarding-guide <br>
+-setting up account <br>
+https://developers.google.com/wallet/generic/getting-started/issuer-onboarding <br>
+-enable wallet api for your account + generate your private key + generate an email account to authenthicate all API request <br>
 https://developers.google.com/wallet/generic/getting-started/auth/rest
+</div>
+
 -pass builder to get an general idea of what the pass would look like. After building the pass, use the json generated to translate to code (use this link to get the 
 type of each field https://developers.google.com/wallet/reference/rest/v1/genericobject). Example can be found in
 Model/WalletObect/GenericPassObject.cs
