@@ -2,10 +2,16 @@
 @page "/qrcode/{link}"
 <h3>QR Code</h3>
 <p>@link</p>
-    @if (!string.IsNullOrEmpty(qrCodeImageBase64))
+@if (!string.IsNullOrEmpty(link))
 {
-    <img src="data:image/png;base64,@qrCodeImageBase64" alt="QR Code" />
+    <MudLink Href="@link">@link</MudLink>
 }
+@*     @if (!string.IsNullOrEmpty(qrCodeImageBase64))
+{
+     <img src="data:image/png;base64,@qrCodeImageBase64" alt="QR Code" /> 
+} 
+
+*@
 
 
 
@@ -15,7 +21,7 @@
     
     private string qrCodeImageBase64;
 
-    protected override void OnParametersSet()
+    @*protected override void OnParametersSet()
     {
         GenerateQRCode();
     }
@@ -33,5 +39,5 @@
                 }
             }
         }
-    }
+    }*@
 }
