@@ -1,6 +1,6 @@
 # Blazor
-<div style="padding: 10px;">
 # Getting started with Google Wallet API
+<div style="padding: 10px;">
 https://developers.google.com/wallet/generic/getting-started/onboarding-guide <br>
 -setting up account <br>
 https://developers.google.com/wallet/generic/getting-started/issuer-onboarding <br>
