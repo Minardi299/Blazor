@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MudBlazorWebApp1", "MudBlazorWebApp1.csproj", "{20F42A81-7B74-4515-A4C3-25F9833ABF68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{20F42A81-7B74-4515-A4C3-25F9833ABF68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20F42A81-7B74-4515-A4C3-25F9833ABF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20F42A81-7B74-4515-A4C3-25F9833ABF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20F42A81-7B74-4515-A4C3-25F9833ABF68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3A16AADC-920A-4821-B3FD-062ED041F0A7}
+	EndGlobalSection
+EndGlobal
